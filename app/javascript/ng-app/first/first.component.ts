@@ -19,6 +19,9 @@ export class FirstComponent {
   private text1s;
   private text2ss;
 
+  private btnDir002;
+  private btnDir016;
+
   constructor() { }
 
   ngOnInit() {
@@ -35,6 +38,9 @@ export class FirstComponent {
 
     this.text1s = ["Banana", "Papaya", "Panama"]
     this.text2ss = [["a01","a02","a03"],["b01","b02","b03"]]
+
+    this.btnDir002 = "002"
+    this.btnDir016 = "016"
   }
 
   button1Click() {

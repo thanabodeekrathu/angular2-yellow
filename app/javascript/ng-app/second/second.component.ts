@@ -11,12 +11,14 @@ export class SecondComponent {
   private myDatas: any;
   private attrs: any
   private newMyData: MyData;
+  private createLabel;
 
   constructor(private myDataService: MyDataService) { }
 
   ngOnInit() {
     this.getAll();
     this.newMyData = new MyData();
+    this.createLabel = "Create";
   }
 
   getAll() {

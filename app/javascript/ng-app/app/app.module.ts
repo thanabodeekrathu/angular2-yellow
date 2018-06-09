@@ -4,6 +4,7 @@ import { enableProdMode } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FirstComponent } from '../first/first.component';
 import { SecondComponent } from '../second/second.component';
+import { MyButtonComponent } from '../my_button/my_button.component';
 import { RouterModule, Routes } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    MyButtonComponent
   ],
   imports: [
     BrowserModule,

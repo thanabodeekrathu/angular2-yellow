@@ -1,6 +1,6 @@
 <h2>1. Variable</h2>
 <h3>{{ editableText1 }}</h3>
-<input type="text" [(ngModel)]="editableText1">
+<input type="text" (ngModel)="editableText1">
 
 
 <h2>2. On Click</h2>
@@ -47,8 +47,6 @@
 
 
 
-
-
 <h2>4. If cause</h2>
 <input type="checkbox" [(ngModel)]="checkbox1"> If
 <div *ngIf="checkbox1"><h3>If true!!</h3></div>
@@ -84,7 +82,13 @@
   </tbody>
 </table>
 
-<h2>6. Link</h2>
+<h2>6. Directives</h2>
+<app-wow-wow [btnText]="btnDir002"></app-wow-wow>
+<br />
+<app-wow-wow [btnText]="btnDir016"></app-wow-wow>
+
+
+<h2>7. Link</h2>
 <a [routerLink]="['/second']">NEXT1</a>
 <a routerLink="/second" routerLinkActive="active">NEXT2</a>
 
