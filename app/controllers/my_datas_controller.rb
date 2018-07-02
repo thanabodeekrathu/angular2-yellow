@@ -24,6 +24,11 @@ class MyDatasController < ApplicationController
     render json: my_datas
   end
 
+  #GET /my_datas
+  def texttexttext
+    render json: ["YETETETETETETETTETETET"]
+  end
+
   private
 
   def create_params

@@ -4,6 +4,7 @@ import { enableProdMode } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FirstComponent } from '../first/first.component';
 import { SecondComponent } from '../second/second.component';
+import { Second_IdComponent } from '../second_id/second_id.component';
 import { MyButtonComponent } from '../my_button/my_button.component';
 import { RouterModule, Routes } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
@@ -16,6 +17,7 @@ enableProdMode();
 const appRoutes: Routes = [
   { path: '', component: FirstComponent },
   { path: 'first', component: FirstComponent },
+  { path: 'second/:id', component: Second_IdComponent },
   { path: 'second', component: SecondComponent }
 ];
 
@@ -24,6 +26,7 @@ const appRoutes: Routes = [
     AppComponent,
     FirstComponent,
     SecondComponent,
+    Second_IdComponent,
     MyButtonComponent
   ],
   imports: [

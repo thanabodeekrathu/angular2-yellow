@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 export class RailsService {
   resources: string;
 
-  constructor (private http: HttpClient) {}
+  constructor (protected http: HttpClient) {}
 
   all() {
     return this.http.get('/' + this.resources);

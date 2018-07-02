@@ -6,6 +6,7 @@ import templateString from './first.html';
 })
 export class FirstComponent {
   private editableText1: string;
+  private editableText2: string;
 
   private a01: number;
   private a02: number;
@@ -22,10 +23,16 @@ export class FirstComponent {
   private btnDir002;
   private btnDir016;
 
+  private number_a: number;
+  private number_b: number;
+  private number_result: number;
+
+
   constructor() { }
 
   ngOnInit() {
     this.editableText1 = "Shoujo Shuumatsu Ryokou";
+    this.editableText2 = "edit table text2";
 
     this.a01 = 1
     this.a02 = 2
@@ -34,6 +41,11 @@ export class FirstComponent {
     this.b02 = 12
     this.b03 = 13
 
+    this.number_a = 0
+    this.number_b = 0
+    this.number_result = 0
+
+
     this.select1 = "02"
 
     this.text1s = ["Banana", "Papaya", "Panama"]
@@ -41,6 +53,16 @@ export class FirstComponent {
 
     this.btnDir002 = "002"
     this.btnDir016 = "016"
+  }
+
+  sum_number(){
+    if (!this.number_a){
+      this.number_a = 0
+    } 
+    if (!this.number_b){
+      this.number_b = 0
+    }
+    this.number_result = this.number_a + this.number_b
   }
 
   button1Click() {

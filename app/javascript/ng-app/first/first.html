@@ -2,32 +2,52 @@
 <h3>{{ editableText1 }}</h3>
 <input type="text" [(ngModel)]="editableText1">
 
+<h3>{{ editableText2 }}</h3>
+<input type="text" [(ngModel)]="editableText2">
+
+<div>============</div>
+<input type="checkbox" [(ngModel)]="checkbox3"> Show Table
+<div *ngIf="checkbox3">
+  <h2>2. On Click</h2>
+  <div>
+    <table id="table-1">
+      <thead>
+        <tr>
+          <th>Zero One</th>
+          <th>Zero Two</th>
+          <th>Zero Three</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ a01 }}</td>
+          <td>{{ a02 }}</td>
+          <td>{{ a03 }}</td>
+        </tr>
+        <tr>
+          <td>{{ b01 }}</td>
+          <td>{{ b02 }}</td>
+          <td>{{ b03 }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="button1Click()">RANDOM!!!</button>
+  </div>
+</div>
 
 
-<h2>2. On Click</h2>
+
+<h2>2.1 SUM</h2>
 <div>
   <table id="table-1">
-    <thead>
-      <tr>
-        <th>Zero One</th>
-        <th>Zero Two</th>
-        <th>Zero Three</th>
-      </tr>
-    </thead>
     <tbody>
       <tr>
-        <td>{{ a01 }}</td>
-        <td>{{ a02 }}</td>
-        <td>{{ a03 }}</td>
-      </tr>
-      <tr>
-        <td>{{ b01 }}</td>
-        <td>{{ b02 }}</td>
-        <td>{{ b03 }}</td>
+        <td><input type="number" [(ngModel)]="number_a" (change)="sum_number()"></td>
+        <td><input type="number" [(ngModel)]="number_b" (change)="sum_number()"></td>
+        <td>{{ number_result }}</td>
       </tr>
     </tbody>
   </table>
-  <button (click)="button1Click()">RANDOM!!!</button>
 </div>
 
 

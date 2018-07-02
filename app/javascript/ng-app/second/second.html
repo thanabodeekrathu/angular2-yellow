@@ -1,3 +1,5 @@
+{{ myText[0] }}
+
 <h1>List MyDatas</h1>
 <table id="my-datas-table">
   <thead>
@@ -18,11 +20,13 @@
       <td><input type="number" [(ngModel)]="myData.integer_test"></td>
       <td><input type="checkbox" [(ngModel)]="myData.boolean_test">boolean_test</td>
       <td>
-        <button (click)="update(myData.id, myData.string_test, myData.integer_test, myData.boolean_test)">
+        <a [routerLink]="[myData.id]">go to</a>
+        <!-- <button (click)="update(myData.id, myData.string_test, myData.integer_test, myData.boolean_test)" >
           Update
-        </button>
+        </button> -->
       </td>
     </tr>
+
 
 
 
