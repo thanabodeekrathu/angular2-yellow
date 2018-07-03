@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#index'
   if Figaro.env.rails_admin_path?
     mount RailsAdmin::Engine => "/#{Figaro.env.rails_admin_path}", as: 'rails_admin'
   end
@@ -16,5 +17,5 @@ Rails.application.routes.draw do
     end
   end
 
-  root to: redirect('/users/sign_in')
+  # root to: redirect('/users/sign_in')
 end
